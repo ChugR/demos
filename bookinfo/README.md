@@ -14,9 +14,10 @@ Presently, this example runs only on Openshift.
 As a prerequisite, you should have two openshift clusters provisioned, one in your private cloud and one in the public cloud. For ease, please use identical project names on both clouds, e.g. bookinfo
 
 To easily run the example,
-* Export two environment variables NAMESPACE and OPENSHIFT_CLUSTER_NAME
+* Export environment variables NAMESPACE, OPENSHIFT_CLUSTER_NAME, and LOCAL_CLUSTER_IP
   * export NAMESPACE=bookinfo
   * export OPENSHIFT_CLUSTER_NAME=mycluster.devcluster.openshift.com (this is just an example, use your own public OpenShift cluster name)
+  * export LOCAL_CLUSTER_IP=192.168.42.228 (this is just an example, use your own public OpenShift cluster name)
 * Substitute environment variables in the public-cloud.yaml and private-cloud.yaml
   * (envsubst < public-cloud.yaml) >> my-public-cloud.yaml
   * (envsubst < private-cloud.yaml) >> my-private-cloud.yaml
