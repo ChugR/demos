@@ -45,7 +45,7 @@ metadata:
   name: productpage
   selfLink: /apis/route.openshift.io/v1/namespaces/hello/routes/console
 spec:
-  host: productpage-${NAMESPACE}.127.0.0.1.nip.io
+  host: productpage-${NAMESPACE}.${LOCAL_CLUSTER_IP}.nip.io
   port:
     targetPort: http
   to:
@@ -269,7 +269,7 @@ metadata:
   name: console
   selfLink: /apis/route.openshift.io/v1/namespaces/hello/routes/console
 spec:
-  host: console.${NAMESPACE}.127.0.0.1.nip.io
+  host: console.${NAMESPACE}.${LOCAL_CLUSTER_IP}.nip.io
   port:
     targetPort: console
   to:
